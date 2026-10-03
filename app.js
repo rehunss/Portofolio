@@ -96,8 +96,8 @@ function updateMotion() {
   document.documentElement.classList.toggle('motion-reduced', isReduced);
   motionControl.setAttribute('aria-pressed', String(isReduced));
   motionControl.disabled = motionPreference.matches;
-  motionControl.title = motionPreference.matches ? 'Gerak dikurangi sesuai pengaturan perangkat' : 'Atur gerak pada halaman ini';
-  motionControl.textContent = isReduced ? 'Gerak dikurangi' : 'Kurangi gerak';
+  motionControl.title = motionPreference.matches ? 'Reduced motion is enabled in your device settings' : 'Control motion on this page';
+  motionControl.textContent = isReduced ? 'Motion reduced' : 'Reduce motion';
   if (isReduced) previewAnimation?.cancel();
   scheduleScroll();
 }
